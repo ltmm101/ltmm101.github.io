@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Final Project Proposal</title>
+        <meta name="description" content="Installation Documentation for your Bootstrap Template" />
+        <meta name="keywords" content="boostrap, template, documentaion" />
+        <meta name="robots" content="noindex, nofollow">
+        
+        <!-- Responsive Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- Stylesheets -->
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+    </head>
+    
+    <body data-spy="scroll" data-target="#sidebar-menu">
+        <!-- Header for Screens Small or Extra Small -->
+        <header class="nav-scope navbar navbar-default navbar-static-top hidden-lg hidden-md" role="banner">
+            <div class="container">
+                <div class="row">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="row">
+                            <!-- Logo -->
+                            <div class="logo-scope">
+                                <p>Final Project Proposal</p>
+                            </div>
+                            </div><!-- close row for logo -->
+                            <!-- Slogan -->
+                            <div class="slogan-scope">
+                                <p>Professional Bootstrap Template</p>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="button-container-scope">
+                                <a href="http://demonthemes/demo/enlighten/" class="btn btn-primary btn-xs" target="_blank">Template Demo <span class="glyphicon glyphicon-picture"></span></a>
+                                <a href="https://wrapbootstrap.com/" class="btn btn-success btn-xs" target="_blank">WrapBootstrap <span class="glyphicon glyphicon-chevron-right"></span></a>
+                            </div>
+                        </div>
+                        <!-- Product Image -->
+                        <div class="col-sm-6 hidden-xs">
+                            <img src="assets/images/template_showcase.png">
+                        </div>
+                    </div>
+                    <nav class="collapse navbar-collapse" role="navigation">
+                        <ul class="nav navbar-nav hidden-md">
+                            <li><a href="#title">Title, Summary and Team Members</a></li>
+                            <li><a href="#background">Background</a></li>
+                            <li><a href="#resources">Resources</a></li>
+                            <li><a href="#goals">Goals and Deliverables</a></li>
+                            <li><a href="#schedule">Schedule</a></li>
+                            <li><a href="#credits">Credits</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <!-- Showcase Header for screen sizes Medium or Large-->
+            <div class="jumbotron jumbotron-scope hidden-sm hidden-xs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <h1>Final Project Proposal</h1>
+<!--                             <p>Professional Bootstrap Template</p>
+                            <a href="http://www.demonthemes.com/demo/enlighten/" class="btn btn-primary btn-lg margin-top-20" target="_blank">Template Demo <span class="glyphicon glyphicon-picture"></span></a>
+                            <a href="https://wrapbootstrap.com/" class="btn btn-success btn-lg margin-top-20" target="_blank">WrapBootstrap <span class="glyphicon glyphicon-chevron-right"></span></a> -->
+                        </div>
+                        <div class="col-md-5">
+                            <div class="pull-right">
+                                <img src="assets/img/template_showcase.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Begin Body -->
+            <div class="container">
+                <div class="row">
+                    <!-- Sidebar -->
+                    <div class="col-md-3">
+                        <div class="well hidden-sm hidden-xs" id="sidebar-menu" data-spy="affix" data-offset-top="330">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#title">Title, Summary and Team Members</a></li>
+                                <li><a href="#background">Background</a></li>
+                                <li><a href="#resources">Resources</a></li>
+                                <li><a href="#goals">Goals and Deliverables</a></li>
+                                <li><a href="#schedule">Schedule</a></li>
+                                <li><a href="#credits">Credits</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="col-md-9">
+                        <!-- Overview -->
+                        <div class="well well-scope" id="title">
+                            <h3 class="margin-bottom-20">Title, Summary and Team Members</h3>
+                            <p>Title: Position Based Fluid Simulation <br> <br>
+                                Members: Leah Tom and Patrick Lutz <br> <br>
+                                Summary: Particle based fluid simulation using position based dynamics (i.e. updating particle positions directly rather than accumulating forces on each particle and then updating accelerations), density constraints, artificial pressure, and vorticity confinement, based on the paper “Position Based Fluids” by Miles Macklin and Matthias Muller.
+                                </p>
+                        </div>
+                        <!-- End Title -->
+                        <!-- Background -->
+                        <div class="panel panel-default panel-scope" id="background">
+                            <div class="panel-heading"><h3>Background</h3></div>
+                            <div class="panel-body">
+                                <table class="table table-striped">
+                                    <tbody>
+                                        Modelling the behavior of fluids and then rendering it have been recognized as challenges for several reasons: the need to track the changing surface of the fluid, enforcing constraints like incompressibility and other behaviours of liquids like tensile instability. Though there are algorithms for modelling the behavior of liquids over time with minuscule spheres, most of these tend to be computationally expensive. In particular, the Smoothed Particle Hydrodynamics (SPH) model being used currently is unstable in cases where a particle does not have enough neighbours to make accurate density estimates. In these cases, the remedy then becomes reducing the size of each time step at the expense of increased computation. <br>
+
+                                        The Position Based Dynamics (PSD) framework handles these edge cases more gracefully by clamping pressures to be non-negative and adding additional pressure terms in order to maintain the values of particle density at convenient values in specific cases. These, however, do come at the expense of maintaining accurate values of incompressibility, the tradeoff being improved computation speeds. Aside from the main paper listed above, we will also be referring to some of the following papers that we were either referenced by aforementioned paper or what we found while researching this topic. <br> <br>
+
+
+                                        <a href="http://matthias-mueller-fischer.ch/publications/hpbd.pdf">http://matthias-mueller-fischer.ch/publications/hpbd.pdf</a>
+                                         <br>
+                                        <a href="http://matthias-mueller-fischer.ch/publications/posBasedDyn.pdf ">http://matthias-mueller-fischer.ch/publications/posBasedDyn.pdf </a>
+                                        <br>
+                                        <a href="https://www.cs.ubc.ca/~rbridson/docs/schechter-siggraph2012-ghostsph.pdf">https://www.cs.ubc.ca/~rbridson/docs/schechter-siggraph2012-ghostsph.pdf</a> <br>
+                                    </tbody>
+                                </table>
+                                
+                            </div>
+                        </div>
+                        <!-- End Background -->
+                        <!-- HTML Structure -->
+                        <div class="panel panel-default panel-scope" id="resources">
+                            <div class="panel-heading"><h3>Resources</h3></div>
+                            <div class="panel-body">
+                                <p class="margin-bottom-30">We will be aiming to create a short animation. We plan  to have approximately 3 frames per second. We plan to have our pictures rendered and then stitch them together using Windows Movie Maker.
+
+                                Since we are drawing relatively basic shapes like spheres, we plan to use OpenGL to draw them onto screen. We will probably just be coding up the basic classes like a water droplet and functions and algorithms that check if collision has occurred between different water droplets (i.e. using a hash grid to keep track of this). If we have time, we will try to render the surface of the water too or try to improve the perception of depth in the movie with a pathtracer. </p>
+                            </div>
+                        </div>
+                        <!-- End HTML Structure -->
+                        <!-- CSS Structure -->
+                        <div class="panel panel-default panel-scope" id="goals">
+                            <div class="panel-heading"><h3>Goals and Deliverables</h3></div>
+                            <div class="panel-body">
+                                <p> 
+                                Our goal is to create a short animation of a ball dropping into a small pool of water and to accurately model the splash created. <br> <br>
+
+                                In order to evaluate how successful we have been in implementing our project, we will need to measure the time taken for the algorithm we implement to run and compare it to the time taken by other more standard algorithms like the Smoothed Particle Hydrodynamics. One possible way of doing this might be to use the animation utility in Blender that creates animations of liquids based on the SPH algorithm. Another alternative might just be to code it up ourselves. With the alternative version implemented, we will do a direct comparison of how much time it took for us to render our images in one implementation versus the other.
+
+                                <br> <br>
+
+                                What we plan to deliver:
+<br> <br>
+
+                                We plan to deliver an animation that has around 5 frames per second and is a realistic representation of water's behavior when a ball is dropped into it. We will achieve this by accounting for the following properties of water: incompressibility, tensile instability and vorticity confinement and viscosity. <br> <br>
+
+                                What we hope to deliver: <br> <br>
+
+                                We hope that we will also have time to code up an alternative implementation of our animation using a different algorithm to compare the performance of our algorithm against. We also hope to be able to improve upon the existing PSD algorithm and to add in our own optimizations, if we can find any. <br> <br>
+
+                                If we are ahead of schedule: <br> <br>
+
+                                We hope to be able to add in a pathtracer to improve the depth perception with lighting effects. We also hope to have enough time to be able to render our body of liquid. This will require additional research on implementing algorithms that will keep track of the surface of the liquid.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- End CSS Structure -->
+                        <!-- Utility Classes -->
+                        <div class="panel panel-default panel-scope" id="schedule">
+                            <div class="panel-heading"><h3>Schedule</h3></div>
+                            <div class="panel-body">
+                                <p>
+                                Here is our suggested timeline. <br> <br>
+
+                                By 19 Apr: <br> 
+                                1. Understand the paper in depth <br>
+                                2. Find sample code to see how our functionalities have been implemented <br>
+                                3. Do research on the data structures we can use and if we can use the version on Blender as the baseline we compare our optimized code to 
+                                4. Implement basic classes like the water droplets and get OpenGL to display spheres on screen.
+                                <br> <br>
+
+                                By 24 Apr:
+                                Implement the following in two dimensions: <br>
+                                1. Implement external forces (i.e. gravity) <br>
+                                2. Implement density constraint solver (including implementing grid-based neighbor approach) <br>
+                                3. Implement external collision detection (i.e. walls) <br>
+                                4. Implement artificial pressure <br>
+                                5. Implement vorticity<br>
+                                6. Implement viscosity <br> <br>
+
+                                By 27 Apr: <br>
+                                1. Implement all of the above in three dimensions and get the animation somewhat working. <br> <br>
+
+                                By 29 Apr: <br>
+                                1. Code up the alternative algorithm to compare our original algorithm's computation time to. <br><br>
+
+                                By 2 May: <br>
+                                1. Implement the additional features we intended to <br>
+                                2. Stitch together the movie in Windows Movie Maker <br><br>
+
+                                By 4 May: <br>
+                                1. Be done preparing for presentation and consolidate everything. <br> <br>
+
+                                By 6 May: <br>
+                                Finish the report
+
+                                </p>
+                                
+                                
+
+                            </div>
+                        </div>
+                        <!-- End Utility Classes -->
+                        <!-- Credits -->
+                        <div class="panel panel-default panel-scope" id="credits">
+                            <div class="panel-heading"><h3>Credits</h3></div>
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Bootstrap 3 <a href="http://getbootstrap.com/" target="_blank">getbootstrap.com/</a></li>
+                                    <li>jQuery <a href="http://jquery.com/" target="_blank">jquery.com/</a></li>
+                                    <li>Animate.css <a href="http://daneden.github.io/animate.css/" target="_blank">daneden.github.io/animate.css/</a></li>
+                                    <li>Google Fonts <a href="http://www.google.com/fonts/" target="_blank">google.com/fonts</a></li>
+                                    <li>Font Awesome <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">fortawesome.github.io/Font-Awesome/</a></li>
+                                    <li>Isotope <a href="http://isotope.metafizzy.co/">isotope.metafizzy.co/</a></li>
+                                    <li>SlickNav <a href="http://slicknav.com/">slicknav.com/</a></li>
+                                    <li>StickyJS <a href="http://stickyjs.com/">stickyjs.com/</a></li>
+                                    <li>Modernizr <a href="http://modernizr.com/">modernizr.com/</a></li>
+                                    <li>LESS <a href="http://lesscss.org/">lesscss.org/</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Credits -->
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- load required scripts -->
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/bootstrap.min.js"></script>
+            <script>
+            $(function() {
+            $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+            $('html,body').animate({
+            scrollTop: target.offset().top
+            }, 1000);
+            return false;
+            }
+            }
+            });
+            });
+            </script>
+            <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+        </body>
+    </html>
